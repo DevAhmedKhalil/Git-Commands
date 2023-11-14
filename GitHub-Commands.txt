@@ -1,0 +1,85 @@
+git --version
+git --help = git
+
+git config --global user.name "DEVenici"
+git config --global user.email "DEVenici@gmail.com"
+
+git config user.name
+git config user.email
+git config --list
+
+git init "mypoject"  
+cd myproject
+ls
+ls -a
+git status
+
+//---------------------------------------------------------------------
+
+touch index.html      			// create file
+git add index.html  	 	 	// adding file to stage area
+git add index.html app.js style.css     // adding multible files to stage area
+git commit -m "created index.html"      // commintting files make it in repo and make a massage
+git log  			        // pring all commits you done and messages
+
+//---------------------------------------------------------------------
+ 
+				// Author: DEVenici <DEVenici@gmail.com>  
+git log			        // Date:   Sat Nov 5 17:20:14 2022 +0200
+				// created index.html                     
+
+git checkout 4b93a791ece6bd3d5d9d1a69b20bb3ff9108c83b
+
+
+git checkout (hashNumber number after commit)
+ex:-
+git checkout 4b93a791ece6bd3d5d9d1a69b20bb3ff9108c83b
+
+//---------------------------------------------------------------------
+
+git branch
+// broblem => HEAD detached at 4b93a79
+git checkout master
+
+----------
+
+git branch khalilBranch           		 // make new branch
+git status 	=> On branch master	         // to know what branch you git in
+
+git checkout khalilBranch 		         // switch to khalilBranch from master
+// دلوقتي معايا نسخه طبق الاصل من الماستر  
+// now i have a new branch like the master it called :"Clone":
+
+//---------------------------------------------------------------------
+
+*** Merge khalilBranch with master ::
+
+git branch  			// to know all branches 
+
+git checkout master   	// to be in master branch
+
+git merge khalilBranch
+
+git log 				// (HEAD -> master, khalilBranch)
+
+
+//---------------------------------------------------------------------
+***GitHub  Git***
+
+[CONNECTION]
+
+1- git remote -v    		// check remote connection  // default nothing
+
+2- git remote add origin https://github.com/DEVenici/myProject.git
+// to make connection (local repo && gitHub(clo repo)
+
+3- git remote set-url origin https://github.com/DEVenici/myProject.git
+// to change link connection if you copied false link
+
+[PUSH TO GITHUB]
+
+4- git push -u origin master    //sign up for first time
+
+[PULL FROM GITHUB]
+5- git pull origin master
+
